@@ -17,6 +17,7 @@ namespace Furniture_store
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GroupSet()
         {
+            this.ProductSet = new HashSet<ProductSet>();
             this.Provider = new HashSet<Provider>();
         }
     
@@ -24,6 +25,8 @@ namespace Furniture_store
         public string Name { get; set; }
         public long Price { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductSet> ProductSet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Provider> Provider { get; set; }
     }

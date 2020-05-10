@@ -24,6 +24,7 @@ namespace Furniture_store
     
         public virtual AgentsSet AgentsSet { get; set; }
         public virtual ClientsSet ClientsSet { get; set; }
+        public virtual GroupSet GroupSet { get; set; }
         public virtual Provider Provider { get; set; }
     }
 }

@@ -84,6 +84,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ProductSet_GroupSet">
+          <End Role="GroupSet" Type="Self.GroupSet" Multiplicity="1" />
+          <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSet">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ProductSet_Provider">
           <End Role="Provider" Type="Self.Provider" Multiplicity="1" />
           <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="*" />
@@ -120,6 +132,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_ProductSet_ClientsSet" Association="Self.FK_ProductSet_ClientsSet">
             <End Role="ClientsSet" EntitySet="ClientsSet" />
+            <End Role="ProductSet" EntitySet="ProductSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSet_GroupSet" Association="Self.FK_ProductSet_GroupSet">
+            <End Role="GroupSet" EntitySet="GroupSet" />
             <End Role="ProductSet" EntitySet="ProductSet" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductSet_Provider" Association="Self.FK_ProductSet_Provider">
@@ -167,6 +183,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="ProductSet" Relationship="Self.FK_ProductSet_GroupSet" FromRole="GroupSet" ToRole="ProductSet" />
           <NavigationProperty Name="Provider" Relationship="Self.FK_Provider_GroupSet" FromRole="GroupSet" ToRole="Provider" />
         </EntityType>
         <EntityType Name="ProductSet">
@@ -182,6 +199,7 @@
           <Property Name="Remaining" Type="Int64" Nullable="false" />
           <NavigationProperty Name="AgentsSet" Relationship="Self.FK_ProductSet_AgentsSet" FromRole="ProductSet" ToRole="AgentsSet" />
           <NavigationProperty Name="ClientsSet" Relationship="Self.FK_ProductSet_ClientsSet" FromRole="ProductSet" ToRole="ClientsSet" />
+          <NavigationProperty Name="GroupSet" Relationship="Self.FK_ProductSet_GroupSet" FromRole="ProductSet" ToRole="GroupSet" />
           <NavigationProperty Name="Provider" Relationship="Self.FK_ProductSet_Provider" FromRole="ProductSet" ToRole="Provider" />
         </EntityType>
         <EntityType Name="Provider">
@@ -223,6 +241,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ProductSet_GroupSet">
+          <End Role="GroupSet" Type="Self.GroupSet" Multiplicity="1" />
+          <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSet">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Provider_GroupSet">
           <End Role="GroupSet" Type="Self.GroupSet" Multiplicity="1" />
           <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
@@ -259,6 +289,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_ProductSet_ClientsSet" Association="Self.FK_ProductSet_ClientsSet">
             <End Role="ClientsSet" EntitySet="ClientsSet" />
+            <End Role="ProductSet" EntitySet="ProductSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSet_GroupSet" Association="Self.FK_ProductSet_GroupSet">
+            <End Role="GroupSet" EntitySet="GroupSet" />
             <End Role="ProductSet" EntitySet="ProductSet" />
           </AssociationSet>
           <AssociationSet Name="FK_Provider_GroupSet" Association="Self.FK_Provider_GroupSet">
