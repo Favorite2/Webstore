@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="27e0c0c2d7fd45d19a9564291867e899" Name="Diagram1">
+        <EntityTypeShape EntityType="WebstoreModel.AgentsSet" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebstoreModel.ClientsSet" Width="1.5" PointX="4.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebstoreModel.GroupSet" Width="1.5" PointX="0.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebstoreModel.ProductSet" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebstoreModel.Provider" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="WebstoreModel.FK_ProductSet_AgentsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WebstoreModel.FK_ProductSet_ClientsSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WebstoreModel.FK_Provider_GroupSet" ManuallyRouted="false" />
+        <AssociationConnector Association="WebstoreModel.FK_ProductSet_Provider" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

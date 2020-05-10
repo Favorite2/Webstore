@@ -8,6 +8,7 @@ namespace Furniture_store
 {
     static class Program
     {
+        public static WebstoreEntities ws = new WebstoreEntities();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,7 @@ namespace Furniture_store
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Menu());
         }
     }
 }
