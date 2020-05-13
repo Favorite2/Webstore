@@ -30,5 +30,6 @@ namespace Furniture_store
         public virtual DbSet<GroupSet> GroupSet { get; set; }
         public virtual DbSet<ProductSet> ProductSet { get; set; }
         public virtual DbSet<Provider> Provider { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

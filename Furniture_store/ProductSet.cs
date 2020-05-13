@@ -19,8 +19,7 @@ namespace Furniture_store
         public int IdAgent { get; set; }
         public int IdProduct { get; set; }
         public int IdProvider { get; set; }
-        public long Available { get; set; }
-        public long Remaining { get; set; }
+        public long Accounting { get; set; }
     
         public virtual AgentsSet AgentsSet { get; set; }
         public virtual ClientsSet ClientsSet { get; set; }

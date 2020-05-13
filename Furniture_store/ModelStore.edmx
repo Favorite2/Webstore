@@ -34,6 +34,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Price" Type="bigint" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductSet">
           <Key>
@@ -44,8 +45,7 @@
           <Property Name="IdAgent" Type="int" Nullable="false" />
           <Property Name="IdProduct" Type="int" Nullable="false" />
           <Property Name="IdProvider" Type="int" Nullable="false" />
-          <Property Name="Available" Type="bigint" Nullable="false" />
-          <Property Name="Remaining" Type="bigint" Nullable="false" />
+          <Property Name="Accounting" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="Provider">
           <Key>
@@ -56,9 +56,16 @@
           <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Price" Type="bigint" Nullable="false" />
-          <Property Name="Quantity" Type="bigint" Nullable="false" />
           <Property Name="IdProduct" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <Association Name="FK_ProductSet_AgentsSet">
           <End Role="AgentsSet" Type="Self.AgentsSet" Multiplicity="1" />
@@ -126,6 +133,7 @@
           <EntitySet Name="GroupSet" EntityType="Self.GroupSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductSet" EntityType="Self.ProductSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Provider" EntityType="Self.Provider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ProductSet_AgentsSet" Association="Self.FK_ProductSet_AgentsSet">
             <End Role="AgentsSet" EntitySet="AgentsSet" />
             <End Role="ProductSet" EntitySet="ProductSet" />
@@ -183,6 +191,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="Int64" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ProductSet" Relationship="Self.FK_ProductSet_GroupSet" FromRole="GroupSet" ToRole="ProductSet" />
           <NavigationProperty Name="Provider" Relationship="Self.FK_Provider_GroupSet" FromRole="GroupSet" ToRole="Provider" />
         </EntityType>
@@ -195,8 +204,7 @@
           <Property Name="IdAgent" Type="Int32" Nullable="false" />
           <Property Name="IdProduct" Type="Int32" Nullable="false" />
           <Property Name="IdProvider" Type="Int32" Nullable="false" />
-          <Property Name="Available" Type="Int64" Nullable="false" />
-          <Property Name="Remaining" Type="Int64" Nullable="false" />
+          <Property Name="Accounting" Type="Int64" Nullable="false" />
           <NavigationProperty Name="AgentsSet" Relationship="Self.FK_ProductSet_AgentsSet" FromRole="ProductSet" ToRole="AgentsSet" />
           <NavigationProperty Name="ClientsSet" Relationship="Self.FK_ProductSet_ClientsSet" FromRole="ProductSet" ToRole="ClientsSet" />
           <NavigationProperty Name="GroupSet" Relationship="Self.FK_ProductSet_GroupSet" FromRole="ProductSet" ToRole="GroupSet" />
@@ -211,11 +219,18 @@
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Int64" Nullable="false" />
-          <Property Name="Quantity" Type="Int64" Nullable="false" />
           <Property Name="IdProduct" Type="Int32" Nullable="false" />
           <NavigationProperty Name="GroupSet" Relationship="Self.FK_Provider_GroupSet" FromRole="Provider" ToRole="GroupSet" />
           <NavigationProperty Name="ProductSet" Relationship="Self.FK_ProductSet_Provider" FromRole="Provider" ToRole="ProductSet" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <Association Name="FK_ProductSet_AgentsSet">
           <End Role="AgentsSet" Type="Self.AgentsSet" Multiplicity="1" />
@@ -283,6 +298,7 @@
           <EntitySet Name="GroupSet" EntityType="Self.GroupSet" />
           <EntitySet Name="ProductSet" EntityType="Self.ProductSet" />
           <EntitySet Name="Provider" EntityType="Self.Provider" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_ProductSet_AgentsSet" Association="Self.FK_ProductSet_AgentsSet">
             <End Role="AgentsSet" EntitySet="AgentsSet" />
             <End Role="ProductSet" EntitySet="ProductSet" />
@@ -340,6 +356,7 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -351,8 +368,7 @@
                 <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
                 <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
-                <ScalarProperty Name="Available" ColumnName="Available" />
-                <ScalarProperty Name="Remaining" ColumnName="Remaining" />
+                <ScalarProperty Name="Accounting" ColumnName="Accounting" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -364,9 +380,17 @@
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="WebstoreModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
