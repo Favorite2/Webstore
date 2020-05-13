@@ -40,9 +40,10 @@
             // 
             // buttonOpenClients
             // 
-            this.buttonOpenClients.Location = new System.Drawing.Point(14, 135);
+            this.buttonOpenClients.Location = new System.Drawing.Point(18, 171);
+            this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenClients.Name = "buttonOpenClients";
-            this.buttonOpenClients.Size = new System.Drawing.Size(274, 53);
+            this.buttonOpenClients.Size = new System.Drawing.Size(352, 67);
             this.buttonOpenClients.TabIndex = 0;
             this.buttonOpenClients.Text = "Клиенты";
             this.buttonOpenClients.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // buttonOpenAgents
             // 
-            this.buttonOpenAgents.Location = new System.Drawing.Point(14, 195);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(18, 247);
+            this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
-            this.buttonOpenAgents.Size = new System.Drawing.Size(274, 53);
+            this.buttonOpenAgents.Size = new System.Drawing.Size(352, 67);
             this.buttonOpenAgents.TabIndex = 1;
             this.buttonOpenAgents.Text = "Агенты";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // buttonOpenProducts
             // 
-            this.buttonOpenProducts.Location = new System.Drawing.Point(14, 255);
+            this.buttonOpenProducts.Location = new System.Drawing.Point(18, 323);
+            this.buttonOpenProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenProducts.Name = "buttonOpenProducts";
-            this.buttonOpenProducts.Size = new System.Drawing.Size(274, 53);
+            this.buttonOpenProducts.Size = new System.Drawing.Size(352, 67);
             this.buttonOpenProducts.TabIndex = 2;
             this.buttonOpenProducts.Text = "Товары";
             this.buttonOpenProducts.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // buttonProvider
             // 
-            this.buttonProvider.Location = new System.Drawing.Point(14, 317);
+            this.buttonProvider.Location = new System.Drawing.Point(18, 402);
+            this.buttonProvider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonProvider.Name = "buttonProvider";
-            this.buttonProvider.Size = new System.Drawing.Size(274, 53);
+            this.buttonProvider.Size = new System.Drawing.Size(352, 67);
             this.buttonProvider.TabIndex = 3;
             this.buttonProvider.Text = "Поставщик";
             this.buttonProvider.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // buttonOpenProduct
             // 
-            this.buttonOpenProduct.Location = new System.Drawing.Point(14, 380);
+            this.buttonOpenProduct.Location = new System.Drawing.Point(18, 481);
+            this.buttonOpenProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenProduct.Name = "buttonOpenProduct";
-            this.buttonOpenProduct.Size = new System.Drawing.Size(274, 53);
+            this.buttonOpenProduct.Size = new System.Drawing.Size(352, 67);
             this.buttonOpenProduct.TabIndex = 4;
             this.buttonOpenProduct.Text = "Учёт товара";
             this.buttonOpenProduct.UseVisualStyleBackColor = true;
@@ -91,26 +96,28 @@
             // labelHello
             // 
             this.labelHello.AutoSize = true;
-            this.labelHello.Location = new System.Drawing.Point(14, 10);
+            this.labelHello.Location = new System.Drawing.Point(18, 13);
+            this.labelHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHello.Name = "labelHello";
-            this.labelHello.Size = new System.Drawing.Size(0, 15);
+            this.labelHello.Size = new System.Drawing.Size(0, 19);
             this.labelHello.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Furniture_store.Properties.Resources._123;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(352, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 447);
+            this.ClientSize = new System.Drawing.Size(388, 566);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenProduct);
@@ -118,7 +125,8 @@
             this.Controls.Add(this.buttonOpenProducts);
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
-            this.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Roboto Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu";
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
