@@ -40,10 +40,10 @@
             // 
             // buttonOpenClients
             // 
-            this.buttonOpenClients.Location = new System.Drawing.Point(18, 171);
+            this.buttonOpenClients.Location = new System.Drawing.Point(18, 170);
             this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenClients.Name = "buttonOpenClients";
-            this.buttonOpenClients.Size = new System.Drawing.Size(352, 67);
+            this.buttonOpenClients.Size = new System.Drawing.Size(352, 36);
             this.buttonOpenClients.TabIndex = 0;
             this.buttonOpenClients.Text = "Клиенты";
             this.buttonOpenClients.UseVisualStyleBackColor = true;
@@ -51,10 +51,10 @@
             // 
             // buttonOpenAgents
             // 
-            this.buttonOpenAgents.Location = new System.Drawing.Point(18, 247);
+            this.buttonOpenAgents.Location = new System.Drawing.Point(18, 214);
             this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
-            this.buttonOpenAgents.Size = new System.Drawing.Size(352, 67);
+            this.buttonOpenAgents.Size = new System.Drawing.Size(352, 36);
             this.buttonOpenAgents.TabIndex = 1;
             this.buttonOpenAgents.Text = "Агенты";
             this.buttonOpenAgents.UseVisualStyleBackColor = true;
@@ -62,10 +62,10 @@
             // 
             // buttonOpenProducts
             // 
-            this.buttonOpenProducts.Location = new System.Drawing.Point(18, 323);
+            this.buttonOpenProducts.Location = new System.Drawing.Point(18, 258);
             this.buttonOpenProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenProducts.Name = "buttonOpenProducts";
-            this.buttonOpenProducts.Size = new System.Drawing.Size(352, 67);
+            this.buttonOpenProducts.Size = new System.Drawing.Size(352, 36);
             this.buttonOpenProducts.TabIndex = 2;
             this.buttonOpenProducts.Text = "Товары";
             this.buttonOpenProducts.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // 
             // buttonProvider
             // 
-            this.buttonProvider.Location = new System.Drawing.Point(18, 402);
+            this.buttonProvider.Location = new System.Drawing.Point(18, 302);
             this.buttonProvider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonProvider.Name = "buttonProvider";
-            this.buttonProvider.Size = new System.Drawing.Size(352, 67);
+            this.buttonProvider.Size = new System.Drawing.Size(352, 36);
             this.buttonProvider.TabIndex = 3;
             this.buttonProvider.Text = "Поставщик";
             this.buttonProvider.UseVisualStyleBackColor = true;
@@ -84,10 +84,10 @@
             // 
             // buttonOpenProduct
             // 
-            this.buttonOpenProduct.Location = new System.Drawing.Point(18, 481);
+            this.buttonOpenProduct.Location = new System.Drawing.Point(18, 346);
             this.buttonOpenProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOpenProduct.Name = "buttonOpenProduct";
-            this.buttonOpenProduct.Size = new System.Drawing.Size(352, 67);
+            this.buttonOpenProduct.Size = new System.Drawing.Size(352, 36);
             this.buttonOpenProduct.TabIndex = 4;
             this.buttonOpenProduct.Text = "Учёт товара";
             this.buttonOpenProduct.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 566);
+            this.ClientSize = new System.Drawing.Size(388, 402);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelHello);
             this.Controls.Add(this.buttonOpenProduct);
