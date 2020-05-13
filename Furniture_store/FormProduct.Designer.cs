@@ -39,10 +39,6 @@
             this.labelProvider = new System.Windows.Forms.Label();
             this.labelAccounting = new System.Windows.Forms.Label();
             this.listViewAccounting = new System.Windows.Forms.ListView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,6 +48,10 @@
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,6 +172,49 @@
             this.listViewAccounting.View = System.Windows.Forms.View.Details;
             this.listViewAccounting.SelectedIndexChanged += new System.EventHandler(this.listViewAccounting_SelectedIndexChanged);
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "id агента";
+            this.columnHeader4.Width = 84;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Агент";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Id клиента";
+            this.columnHeader6.Width = 98;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Клиент";
+            this.columnHeader14.Width = 78;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Id товара";
+            this.columnHeader15.Width = 88;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Товар";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Id поставщика";
+            this.columnHeader17.Width = 126;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Поставщик";
+            this.columnHeader18.Width = 101;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Остаток";
+            this.columnHeader19.Width = 74;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Furniture_store.Properties.Resources._123;
@@ -211,42 +254,6 @@
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "id агента";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Агент";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Id клиента";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Клиент";
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Id товара";
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Товар";
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Id поставщика";
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "Поставщик";
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Остаток";
             // 
             // FormProduct
             // 
